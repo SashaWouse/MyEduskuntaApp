@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyEduskuntaApp</string>
+
+    <!-- Vote Quality -->
+    <string name="vote">Like or Dislike?</string>
+    <string name="bad_quality">Dislike</string>
+    <string name="good_quality">Like</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/allPartiesFragment">
+    <fragment
+        android:id="@+id/allPartiesFragment"
+        android:name="my.firstaapp.myeduskuntaapp.models.AllPartiesFragment"
+        android:label="AllPartiesFragment"
+        tools:layout="@layout/all_parties_fragment">
+        <action
+            android:id="@+id/action_showMembers"
+            app:destination="@id/parlamentMembersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parlamentMembersFragment"
+        android:name="my.firstaapp.myeduskuntaapp.models.Parlament.ParlamentMembersFragment"
+        android:label="ParlamentMembersFragment" >
+        <argument
+            android:name="partySelected"
+            app:argType="my.firstaapp.myeduskuntaapp.database.ParlamentData"/>
+        <action
+            android:id="@+id/action_showDetails"
+            app:destination="@id/memberSelected"
+            app:argType="my.firstaapp.myeduskuntaapp.database.ParlamentData"/>
+    </fragment>
+    <fragment
+        android:id="@+id/memberSelected"
+        android:name="my.firstaapp.myeduskuntaapp.models.SingleIMember.MemberInfoFragment"
+        android:label="MemberInfoFragment" >
+        <argument
+            android:name="memberSelected"
+            app:argType="my.firstaapp.myeduskuntaapp.database.ParlamentData"/>
+    </fragment>
+
+</navigation>
